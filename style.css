@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+}
+
+section {
+  margin: 0 10%;
+}
+
+body {
+  background-color: hsl(216deg, 12%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #1f2633;
+  border-radius: 32px;
+  height: 400px;
+  padding: 5%;
+}
+.container h2 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.container p {
+  color: hsl(217deg, 12%, 63%);
+}
+.container #img-container {
+  display: flex;
+  justify-content: center;
+}
+
+#submit {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  border: 0;
+  border-radius: 32px;
+  width: 100%;
+  height: 40px;
+  font-size: 1rem;
+}
+
+#submit:hover {
+  cursor: pointer;
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.stars-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+.stars-container button {
+  background-color: hsl(213deg, 19%, 18%);
+  border: 0;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.stars-container button:hover {
+  cursor: pointer;
+  background-color: hsl(25deg, 97%, 53%);
+}
+.stars-container .active {
+  background-color: hsl(216deg, 12%, 54%);
+}
+
+.hide {
+  display: none;
+}
+
+#star-image {
+  background-color: hsl(213deg, 19%, 18%);
+  opacity: 0.9;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+#stars-selected {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+#stars-selected p {
+  display: inline-block;
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 32px;
+  padding: 10px;
+}
+
+.container-selected img {
+  margin: 1.5rem 0;
+}
+.container-selected p, .container-selected h2 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  section {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

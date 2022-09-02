@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(217, 12%, 63%);
+$medium-gray: hsl(216, 12%, 54%);
+$dark-blue-100: hsl(213, 19%, 18%);
+$dark-blue-200: #1f2633;
+$very-dark-blue: hsl(216, 12%, 8%);
+$orange: hsl(25, 97%, 53%);
+
+$border-radius: 32px;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+}
+
+section {
+  margin: 0 10%;
+}
+
+body {
+  background-color: $very-dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: $dark-blue-200;
+  border-radius: $border-radius;
+  height: 400px;
+  padding: 5%;
+  h2 {
+    color: $white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: $light-gray;
+  }
+  #img-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#submit {
+  background-color: $orange;
+  color: $white;
+  border: 0;
+  border-radius: $border-radius;
+  width: 100%;
+  height: 40px;
+  font-size: 1rem; 
+}
+#submit:hover {
+  cursor: pointer;
+  color: $orange;
+  background-color: $white;
+}
+
+.stars-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  button {
+    background-color: $dark-blue-100;
+    border: 0;
+    color: $white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: $orange;
+  }
+  .active {
+    background-color: $medium-gray;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+#star-image {
+  background-color: $dark-blue-100;
+  opacity: 0.9;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+#stars-selected {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  p {
+    display: inline-block;
+    color: $orange;
+    background-color: $dark-blue-100;
+    border-radius: $border-radius;
+    padding: 10px;
+  }
+}
+
+.container-selected {
+  img {
+    margin: 1.5rem 0;
+  }
+  p, h2 {
+    text-align: center;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  section {
+    width: 50%;
+    margin: auto;
+  }
+}

@@ -11,7 +11,7 @@
   <body>
     <main>
       <section>
-        <article class="container">
+        <article id="first-container" class="container">
           <img id="star-image" src="/assets/icon-star.svg" alt="star" />
           <h2>How did we do?</h2>
           <p>
@@ -20,19 +20,22 @@
           </p>
           <div class="stars-container">
             <button>1</button>
-            <button class="active">2</button>
+            <button>2</button>
             <button>3</button>
             <button>4</button>
             <button>5</button>
           </div>
           <button id="submit">SUBMIT</button>
         </article>
-        <article class="container hide container-selected">
+        <article
+          id="second-container"
+          class="container hide container-selected"
+        >
           <div id="img-container">
             <img src="/assets/illustration-thank-you.svg" alt="image" />
           </div>
           <div id="stars-selected">
-            <p>You selected 4 out of 5</p>
+            <p>You selected X out of 5</p>
           </div>
           <h2>Thank you!</h2>
           <p>

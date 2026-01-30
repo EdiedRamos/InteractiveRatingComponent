@@ -42,41 +42,41 @@ body {
 }
 
 .text-preset-1 {
-  font-size: 28px;
-  line-height: 35px;
+  font-size: 1.75rem;
+  line-height: 2.1875rem;
 }
 .text-preset-2 {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
 }
 .text-preset-3 {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.2px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.0125rem;
 }
 
 .text-preset-4-bold {
-  font-size: 15px;
-  line-height: 19px;
-  letter-spacing: 2px;
+  font-size: 0.9375rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.125rem;
 }
 .text-preset-4-regular {
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 
 .text-preset-5-bold {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
 }
 .text-preset-5-semibold {
   font-weight: 600;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 .text-preset-5-regular {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 /* Utilities */
@@ -158,13 +158,13 @@ fieldset {
   label {
     display: grid;
     place-items: center;
-    transition: all 0.25s ease;
+    transition: background-color 0.25s linear;
     cursor: pointer;
     border-radius: 50%;
     background-color: var(--grey-900);
     width: 42px;
     height: 42px;
-    color: var(--white);
+    color: var(--grey-500);
 
     @media (width >= 768px) {
       width: 51px;
@@ -184,7 +184,7 @@ fieldset {
 
   label:hover {
     background-color: var(--orange-500);
-    color: var(--white);
+    color: var(--grey-900);
   }
 }
 
@@ -237,5 +237,12 @@ fieldset {
 
   .card__description {
     margin-bottom: 0;
+  }
+}
+
+/* Controls */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
   }
 }

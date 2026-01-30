@@ -1,49 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./assets/favicon-32x32.png" />
+    <link rel="icon" href="./assets/favicon.png" />
+    <script src="./index.js" defer></script>
+    <meta name="description" content="Nice, small rating component prototype" />
     <title>Interactive Rating Component</title>
   </head>
+
   <body>
     <main>
-      <section>
-        <article id="first-container" class="container">
-          <img id="star-image" src="./assets/icon-star.svg" alt="star"></img>
-          <h2>How did we do?</h2>
-          <p>
-            Please let us know how we did with your support request. All
-            feedback is appreciated to help us improve our offering!
-          </p>
-          <div class="stars-container">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-          </div>
-          <button id="submit">SUBMIT</button>
-        </article>
-        <article
-          id="second-container"
-          class="container hide container-selected"
-        >
-          <div id="img-container">
-            <img src="/assets/illustration-thank-you.svg" alt="image"></img>
-          </div>
-          <div id="stars-selected">
-            <p>You selected X out of 5</p>
-          </div>
-          <h2>Thank you!</h2>
-          <p>
-            We appreciate you taking the time to give a rating. If you ever need
-            more support, don't hesitate to get in touch!
-          </p>
-        </article>
-      </section>
+      <form id="first-container" class="card">
+        <div class="card__picture">
+          <img id="star-image" src="./assets/icon-star.svg" alt="star" />
+        </div>
+        <h1 class="card__title text-preset-1">How did we do?</h1>
+        <p class="card__description text-preset-4-regular">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <fieldset>
+          <legend class="sr-only">Select a rating from 1 to 5</legend>
+          <ul class="card__rating">
+            <li class="rating__item">
+              <input required id="s1" type="radio" name="stars" value="1" />
+              <label class="text-preset-3" for="s1">1</label>
+            </li>
+            <li class="rating__item">
+              <input id="s2" type="radio" name="stars" value="2" />
+              <label class="text-preset-3" for="s2">2</label>
+            </li>
+            <li class="rating__item">
+              <input id="s3" type="radio" name="stars" value="3" />
+              <label class="text-preset-3" for="s3">3</label>
+            </li>
+            <li class="rating__item">
+              <input id="s4" type="radio" name="stars" value="4" />
+              <label class="text-preset-3" for="s4">4</label>
+            </li>
+            <li class="rating__item">
+              <input id="s5" type="radio" name="stars" value="5" />
+              <label class="text-preset-3" for="s5">5</label>
+            </li>
+          </ul>
+        </fieldset>
+        <input
+          class="card__submit text-preset-5"
+          type="submit"
+          id="submit"
+          value="SUBMIT"
+        />
+      </form>
+
+      <article id="second-container" class="card card--second is-hidden">
+        <div class="card__photo">
+          <img src="/assets/illustration-thank-you.svg" alt="online payment" />
+        </div>
+        <p id="card-tag" class="card__tag text-preset-4-regular">
+          You selected 1 out of 5
+        </p>
+        <h2 class="card__title text-preset-1">Thank you!</h2>
+        <p class="card__description text-preset-4-regular">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </article>
     </main>
     <script src="index.js"></script>
   </body>

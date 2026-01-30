@@ -22,37 +22,30 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <fieldset>
+        <fieldset class="card__rating">
           <legend class="sr-only">Select a rating from 1 to 5</legend>
-          <ul class="card__rating">
-            <li class="rating__item">
-              <input required id="s1" type="radio" name="stars" value="1" />
-              <label class="text-preset-3" for="s1">1</label>
-            </li>
-            <li class="rating__item">
-              <input id="s2" type="radio" name="stars" value="2" />
-              <label class="text-preset-3" for="s2">2</label>
-            </li>
-            <li class="rating__item">
-              <input id="s3" type="radio" name="stars" value="3" />
-              <label class="text-preset-3" for="s3">3</label>
-            </li>
-            <li class="rating__item">
-              <input id="s4" type="radio" name="stars" value="4" />
-              <label class="text-preset-3" for="s4">4</label>
-            </li>
-            <li class="rating__item">
-              <input id="s5" type="radio" name="stars" value="5" />
-              <label class="text-preset-3" for="s5">5</label>
-            </li>
-          </ul>
+          <input required id="s1" type="radio" name="stars" value="1" />
+          <label class="text-preset-3" for="s1">1</label>
+          <input id="s2" type="radio" name="stars" value="2" />
+          <label class="text-preset-3" for="s2">2</label>
+          <input id="s3" type="radio" name="stars" value="3" />
+          <label class="text-preset-3" for="s3">3</label>
+          <input id="s4" type="radio" name="stars" value="4" />
+          <label class="text-preset-3" for="s4">4</label>
+          <input id="s5" type="radio" name="stars" value="5" />
+          <label class="text-preset-3" for="s5">5</label>
         </fieldset>
         <button class="card__submit text-preset-5" type="submit" id="submit">
           SUBMIT
         </button>
       </form>
 
-      <article id="second-container" class="card card--second is-hidden">
+      <section
+        id="second-container"
+        class="card card--second is-hidden"
+        role="region"
+        aria-label="Thank you message"
+      >
         <div class="card__photo">
           <img src="./assets/illustration-thank-you.svg" alt="online payment" />
         </div>
@@ -64,7 +57,7 @@
           We appreciate you taking the time to give a rating. If you ever need
           more support, don't hesitate to get in touch!
         </p>
-      </article>
+      </section>
     </main>
     <script src="index.js"></script>
   </body>

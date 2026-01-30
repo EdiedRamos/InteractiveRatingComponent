@@ -148,44 +148,42 @@ fieldset {
   }
 }
 
-.rating__item {
-  input {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-  }
+.card__rating input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
 
-  label {
-    display: grid;
-    place-items: center;
-    transition: background-color 0.25s linear;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: var(--grey-900);
-    width: 42px;
-    height: 42px;
-    color: var(--grey-500);
+.card__rating label {
+  display: grid;
+  place-items: center;
+  transition: background-color 0.25s linear;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--grey-900);
+  width: 42px;
+  height: 42px;
+  color: var(--grey-500);
 
-    @media (width >= 768px) {
-      width: 51px;
-      height: 51px;
-    }
+  @media (width >= 768px) {
+    width: 51px;
+    height: 51px;
   }
+}
 
-  input:checked + label {
-    background-color: var(--white);
-    color: var(--grey-900);
-  }
+.card__rating label:hover {
+  background-color: var(--orange-500);
+  color: var(--grey-900);
+}
 
-  input:focus-visible + label {
-    outline: 2px solid var(--orange-500);
-    outline-offset: 2px;
-  }
+.card__rating input:checked + label {
+  background-color: var(--white);
+  color: var(--grey-900);
+}
 
-  label:hover {
-    background-color: var(--orange-500);
-    color: var(--grey-900);
-  }
+.card__rating input:focus-visible + label {
+  outline: 2px solid var(--orange-500);
+  outline-offset: 2px;
 }
 
 .card__submit {
